@@ -1,6 +1,6 @@
 # Usman’s little corner of the internet
 
-A static personal portfolio featuring Hisaab, Eatify, and NorthStar.
+A static personal portfolio featuring Hisaab and Eatify.
 
 The published site lives in `dist/`. No build step or runtime dependencies.
 Run a static HTTP server against `dist/` to preview it locally.
@@ -10,3 +10,4 @@ Enable GitHub Pages with GitHub Actions as the source when creating the reposito
 The intended repository is `usmankaraamat/usmankaraamat.github.io`.
 
 The screenshots are existing demo captures. The CV is the supplied professional PDF.
+
