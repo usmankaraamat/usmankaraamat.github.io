@@ -11,3 +11,8 @@ The intended repository is `usmankaraamat/usmankaraamat.github.io`.
 
 The screenshots are existing demo captures. The CV is the supplied professional PDF.
 
+Page views are counted through the same private Supabase product-insights
+endpoint as Eatify and Hisaab. It stores a random local browser ID and page name
+only. View totals with `portfolio_usage_summary` and per-page counts with
+`product_event_daily` in the Supabase SQL editor.
+

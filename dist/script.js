@@ -26,3 +26,30 @@ document.addEventListener('click', event => {
   if (link && link.hash && link.href === location.href) revealStory();
 });
 revealStory();
+
+// Tiny first-party visit counter shared with the apps' product-insights backend.
+// It sends only a random browser ID and this site's page path: no referrer,
+// cookies, IP-derived fields, device details, or portfolio interaction history.
+(function countVisit(){
+  const key='usman.portfolio.visitorId';
+  let visitorId;
+  try {
+    visitorId=localStorage.getItem(key);
+    if(!/^[0-9a-f-]{36}$/i.test(visitorId||'')){
+      visitorId=crypto.randomUUID();
+      localStorage.setItem(key,visitorId);
+    }
+  } catch(e){ visitorId=crypto.randomUUID(); }
+  fetch('https://rekcgerktrykotwzppkz.supabase.co/functions/v1/product-data',{
+    method:'POST',
+    keepalive:true,
+    headers:{
+      apikey:'sb_publishable_adWOcEpQyprhtOBpjSLS7A_sYW58wkX',
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify({
+      app:'portfolio', kind:'event', event:'page_view', installId:visitorId,
+      page:location.pathname.split('/').pop()||'index.html'
+    })
+  }).catch(()=>{});
+})();
