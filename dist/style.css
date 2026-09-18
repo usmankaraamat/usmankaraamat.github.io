@@ -20,14 +20,14 @@ details:target{scroll-margin-top:20px}
 @media(max-width:1050px){.community-layout h1{font-size:55px}}
 @media(max-width:700px){.site-header{height:96px;gap:12px}.site-header nav{display:grid;grid-template-columns:repeat(2,auto);gap:3px 18px;max-width:none}.site-header nav a{font-size:12px;padding:4px 0}.chapter-page .chapter{padding-top:20px}.chapter-heading h1{font-size:37px;letter-spacing:-1.8px}.community-layout h1{font-size:50px;letter-spacing:-2px;max-width:340px}.community-layout h1 br{display:none}.chapter-page .outside{margin-bottom:35px}}
 /* Dark surfaces and a consistent treatment for navigation actions. */
-:root{color-scheme:dark;--paper:#111315;--ink:#f4f5f3;--muted:#adb3b7;--blue:#a6b7ff;--line:#34393e;--surface:#1b1f23;--action:#fff;--action-ink:#111315}
+:root{color-scheme:dark;--paper:#111315;--ink:#f4f5f3;--muted:#adb3b7;--blue:#a6b7ff;--line:#34393e;--surface:#1b1f23;--action:#181c20;--action-ink:#fff}
 ::selection{background:#cbd6ff;color:#111315}
 .site-header{background:#111315f5;backdrop-filter:blur(16px);box-shadow:none}
 .site-header nav{gap:10px}
-.site-header nav a,.button,.source,.text-link,.contact,.chapter .section-heading a,.story-body a,.last-nudge a,.footer-bottom a,.route-link{background:var(--action);color:var(--action-ink);border:1px solid transparent;border-radius:14px;min-height:44px;padding:11px 17px;display:inline-flex;align-items:center;justify-content:center;gap:9px;line-height:1.4;transition:background .18s,transform .18s,box-shadow .18s}
-.site-header nav a[aria-current="page"]{background:#cbd6ff;color:#111315;border:1px solid transparent;box-shadow:inset 0 0 0 1px #a6b7ff}
-.site-header nav a:hover,.button:hover,.source:hover,.text-link:hover,.contact:hover,.chapter .section-heading a:hover,.story-body a:hover,.last-nudge a:hover,.footer-bottom a:hover,.route:hover .route-link{background:#dfe5ff;color:#111315;transform:translateY(-2px)}
-.site-header nav a[aria-current="page"]:hover{background:#cbd6ff}
+.site-header nav a,.button,.source,.text-link,.contact,.chapter .section-heading a,.story-body a,.last-nudge a,.footer-bottom a,.route-link{background:var(--action);color:var(--action-ink);border:1px solid #fff;border-radius:14px;min-height:44px;padding:11px 17px;display:inline-flex;align-items:center;justify-content:center;gap:9px;line-height:1.4;transition:background .18s,transform .18s,box-shadow .18s}
+.site-header nav a[aria-current="page"]{background:#30363e;color:#fff;border:1px solid #fff;box-shadow:inset 0 -3px 0 #fff}
+.site-header nav a:hover,.button:hover,.source:hover,.text-link:hover,.contact:hover,.chapter .section-heading a:hover,.story-body a:hover,.last-nudge a:hover,.footer-bottom a:hover,.route:hover .route-link{background:#30363e;color:#fff;transform:translateY(-2px)}
+.site-header nav a[aria-current="page"]:hover{background:#3a424c}
 .project{border-radius:26px;border:1px solid var(--line)}
 .hisaab{background:#202534}.eatify{background:#222b24}
 .project-visual{background:#292f43}.eatify .project-visual{background:#2c3b2d}
@@ -50,3 +50,11 @@ details:target{scroll-margin-top:20px}
 .last-nudge{flex-wrap:wrap}.last-nudge a{max-width:100%;text-align:left}.footer-bottom{align-items:center}
 a:focus-visible,summary:focus-visible{outline:3px solid #b9c8ff;outline-offset:5px}
 @media(max-width:700px){.site-header{height:116px}.site-header nav{gap:6px;grid-template-columns:repeat(2,auto)}.site-header nav a{font-size:11px;min-height:40px;padding:9px 10px;border-radius:11px}.wordmark{font-size:22px}.wordmark span{font-size:26px}html{scroll-padding-top:136px}.project{border-radius:22px}.project-copy{padding:24px}.project-links{gap:10px}.project-links a{font-size:12px;padding:11px 13px}.button span{margin-left:7px}.route{border-radius:20px}.route-link{padding:12px 15px}.chapter .section-heading{flex-wrap:wrap;gap:12px}.chapter .section-heading a{font-size:11px;padding:10px 13px}.contact{font-size:18px}.text-link{max-width:100%}.footer-bottom a{margin-left:0}.work-feature{border-radius:22px}.last-nudge a{font-size:12px}}
+
+/* Keep every chapter in one row beneath the wordmark on phones. */
+@media(max-width:700px){
+  .site-header{height:126px;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px}
+  .site-header nav{display:flex;flex-wrap:nowrap;justify-content:flex-start;width:100%;max-width:none;gap:6px}
+  .site-header nav a{flex:1 1 auto;min-width:0;min-height:44px;font-size:11px;padding:10px 6px;gap:0}
+  html{scroll-padding-top:146px}
+}
