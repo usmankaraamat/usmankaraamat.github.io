@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usman Karamat — engineering</title>
+  <meta name="description" content="Computer vision, edge AI, and the mechanical engineering projects that came before.">
+  <meta name="theme-color" content="#111315">
+  <meta property="og:title" content="Usman Karamat — engineering">
+  <meta property="og:description" content="Computer vision, edge AI, and the mechanical engineering projects that came before.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f49ed'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='40' font-weight='700' fill='white'%3Eu%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="chapter-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap"><a class="wordmark" href="index.html" aria-label="Usman home">usman<span>＊</span></a><nav aria-label="Main navigation"><a href="index.html">home</a><a href="engineering.html" aria-current="page">engineering</a><a href="beyond-work.html">beyond work</a><a href="side-quests.html">side quests</a></nav></header>
+  <main id="main">
+    <section id="engineering" class="engineering chapter wrap" aria-labelledby="engineering-title">
+      <div class="section-heading"><span>01 / THE ENGINEERING CHAPTER</span><a href="index.html#explore">all rabbit holes ↗</a></div>
+      <div class="chapter-heading"><h1 id="engineering-title">from moving things.<br>to teaching things to see.</h1><p>Mechanical engineering at NUST.<br>Then a fairly consequential detour into ML.</p></div>
+      <div class="work-feature">
+        <div><div class="eyebrow">RANSAC LABS (HAZEN.AI) · SEPT 2025 — PRESENT</div><h3>the model works.<br>now make it work<br><em>out there.</em></h3><p>I work on computer vision for traffic-enforcement cameras: detecting seatbelt and mobile-phone violations, reducing false positives, and testing what actually runs on the edge.</p><div class="tech-tags"><span>PyTorch</span><span>TensorRT</span><span>Jetson Orin</span></div></div>
+        <div class="vision-note"><span class="note-label">FIELD NOTES / EDGE AI</span><div class="vision-diagram" aria-hidden="true"><div class="target-frame"><span class="target-dot"></span><span class="target-label">a little more context.</span></div><span class="diagram-axis">DATA → MODEL → REAL WORLD</span></div><p>A good benchmark is a beginning.<br>Latency and false positives get a vote, too.</p></div>
+      </div>
+      <div class="stories">
+        <details id="synthetic"><summary><span class="story-no">01</span><span><strong>what if the training data didn’t need a camera?</strong><small>Synthetic data · Unity · model evaluation</small></span><span class="plus" aria-hidden="true">+</span></summary><div class="story-body"><p>I generated training imagery in Unity and trained PyTorch detection models to reduce dependence on manual annotation. The synthetic-only models reached near production-level seatbelt-detection performance.</p><p>Alongside that work, I benchmark TensorRT engines on Jetson Orin and build evaluation pipelines for precision, recall, and F1. The recurring question: how much accuracy can we keep within a real-time inference budget?</p><a href="#corrosion">Earlier in the vision rabbit hole: corrosion detection ↓</a></div></details>
+        <details id="corrosion"><summary><span class="story-no">02</span><span><strong>rust has levels. i taught a model four of them.</strong><small>NCAI · Computer Vision Intern · Summer 2024</small></span><span class="plus" aria-hidden="true">+</span></summary><div class="story-body"><p>At the National Center for Artificial Intelligence, I built a YOLOv8 segmentation model for corrosion on offshore oil-rig structures. The dataset brought together 8,000+ annotated images from open sources, with four corrosion-severity levels.</p><p>The aim was to support maintenance inspections with automated segmentation and CUDA-accelerated inference.</p><div class="tech-tags"><span>YOLOv8</span><span>Roboflow</span><span>OpenImages</span><span>CUDA</span></div><a href="side-quests.html#plates">Another vision experiment: reading number plates ↗</a></div></details>
+        <details id="mechanical"><summary><span class="story-no">03</span><span><strong>yes, the mechanical part was real.</strong><small>Robots · an off-road buggy · a relief hexacopter</small></span><span class="plus" aria-hidden="true">+</span></summary><div class="story-body"><div class="mini-grid"><article><span class="eyebrow">FINAL YEAR · 2024–25</span><h4>Four robots. One heavy problem.</h4><p>In a team of four, I worked on a robot fleet for moving heavy loads, researching an 800 kg lifting target and refining designs with SolidWorks and COMSOL.</p><small>Design target, not a claimed tested payload.</small></article><article><span class="eyebrow">CHASSIS LEAD · 2024</span><h4>Less weight. More off-road.</h4><p>Our buggy placed 4th among 16 teams in a national competition. Iterations on the chassis cut weight by 20% and costs by over 10%.</p></article><article><span class="eyebrow">DESIGN LEAD · 2023</span><h4>Six rotors. A very real budget.</h4><p>I led design in a ten-person team building a hexacopter for emergency relief. Simulation helped reduce composite use and save over PKR 100,000. The project won Best Financial Planning among more than ten teams.</p></article></div><a href="beyond-work.html">Apparently the budgeting theme follows me everywhere ↓</a></div></details>
+        <details><summary><span class="story-no">04</span><span><strong>before shipping it, try breaking it.</strong><small>CureMD · Software Quality Assurance Intern · Summer 2025</small></span><span class="plus" aria-hidden="true">+</span></summary><div class="story-body"><p>At CureMD, I worked through test-case design, equivalence partitioning, boundary-value analysis, and flowcharting across the software development lifecycle. I also completed ISTQB CTFL 4.0 certification.</p><p>A useful interlude between building a thing and trusting that it behaves.</p></div></details>
+      </div>
+    </section>
+<section class="last-nudge wrap" aria-label="Keep exploring"><span>another rabbit hole?</span><a href="beyond-work.html">turns out, i can work with people ↗</a><a href="index.html">back to home ↗</a></section>
+    <footer class="wrap"><div class="footer-top"><h2>anyways, hey.</h2><a class="contact" href="mailto:usmankaramat78@gmail.com">say hello ↗</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> Usman Karamat</span><span>made with a little too much attention.</span><a href="https://github.com/usmankaraamat" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
