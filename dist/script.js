@@ -31,6 +31,7 @@ revealStory();
 // It sends only a random browser ID and this site's page path: no referrer,
 // cookies, IP-derived fields, device details, or portfolio interaction history.
 (function countVisit(){
+  if (['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)) return;
   const key='usman.portfolio.visitorId';
   let visitorId;
   try {
