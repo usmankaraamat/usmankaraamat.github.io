@@ -74,3 +74,56 @@ a:focus-visible,summary:focus-visible{outline:3px solid #b9c8ff;outline-offset:5
 .build-note{font-size:13px;line-height:1.65;color:#bdc3c8;border-top:1px solid #ffffff26;padding-top:16px;margin:0 0 26px;max-width:390px}.build-note strong{color:#f4f5f3;font-weight:500}
 @media(max-width:1050px){.hero .margin-note{position:static;display:block;transform:none;margin-top:24px}.offer-grid article{padding:22px}.offer-grid h3{font-size:23px}}
 @media(max-width:700px){.hero-actions{margin-top:24px;flex-direction:row;flex-wrap:wrap;align-items:center}.hero-bottom .hero-actions .text-link{margin-top:0}.offer-grid{grid-template-columns:1fr}.offer-grid h3 br{display:none}.offer-grid h3{margin-top:14px}.working-note{flex-direction:column;align-items:flex-start;gap:22px}.offer{padding-bottom:44px}.offer>.section-heading{flex-wrap:wrap;gap:8px}.footer-top{align-items:flex-start;flex-direction:column}.footer-top h2{font-size:46px}}
+
+/* Household AI: its page and its card on the home page. Green is "on your computer", blue is "online". */
+:root{--home:#d3e4b7;--home-bg:#1f2820;--home-line:#4d5e45;--out:#bac7ff;--out-bg:#1d2130;--out-line:#4a5580}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hx-stay{color:var(--home)}
+.hx-intro .chapter-heading h1{max-width:760px}
+.hx-intro .chapter-heading{display:block}.hx-intro .chapter-heading>p{font-size:22px;color:var(--ink);max-width:none;margin-top:18px}
+.hx-built{color:var(--muted);font-size:15px;max-width:620px}
+.hx-top-links{margin-top:26px}
+.hx-lanes-head{display:grid;grid-template-columns:1fr 1fr;font-size:11px;font-weight:600;letter-spacing:1.6px;margin-bottom:14px}
+.hx-lanes-head .out{color:var(--out)}.hx-lanes-head .in{color:var(--home);padding-left:34px}
+.hx-flow{list-style:none;margin:0;padding:0;position:relative;display:grid;grid-template-columns:1fr 1fr;row-gap:14px}
+.hx-flow:before{content:'';position:absolute;left:50%;top:-6px;bottom:-6px;border-left:2px dashed #5b6168}
+.hx-step,.hx-side{display:flex;gap:16px;align-items:flex-start;border-radius:20px;padding:22px 24px;border:1px solid}
+.hx-step.out{grid-column:1;margin-right:34px;background:var(--out-bg);border-color:var(--out-line)}
+.hx-step.in,.hx-side{grid-column:2;margin-left:34px;background:var(--home-bg);border-color:var(--home-line)}
+.hx-n{font-family:var(--heading);font-size:30px;line-height:1;font-weight:600;min-width:22px}
+.hx-step.out .hx-n{color:var(--out)}.hx-step.in .hx-n,.hx-side .hx-n{color:var(--home)}
+.hx-step h3,.hx-side h3{font-family:var(--heading);font-size:22px;font-weight:500;letter-spacing:-.5px;line-height:1.25;margin:3px 0 8px}
+.hx-step p,.hx-side p{font-size:15px;color:#d0d5d9;line-height:1.6}
+.hx-aside{margin-top:10px;font-size:13.5px!important;font-style:italic;color:#9aa1a7!important}
+.hx-quiet{grid-column:1;grid-row:span 3;align-self:center;justify-self:end;margin-right:60px;text-align:right;font-style:italic;font-size:15px;line-height:1.5;color:#7f868c;transform:rotate(-3deg)}
+.hx-side{margin-top:34px;margin-left:calc(50% + 34px)}
+.hx-fine{margin-top:22px;font-size:13px;color:var(--muted);margin-left:calc(50% + 34px)}
+.hx-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.hx-stats div{border-top:2px solid var(--home);padding-top:16px}
+.hx-stats strong{display:block;font-family:var(--heading);font-size:40px;font-weight:500;letter-spacing:-1.5px;line-height:1.1}
+.hx-stats span{display:block;margin-top:10px;font-size:14px;color:var(--muted);line-height:1.55}
+.hx-limits{list-style:none;padding:0;margin:0;max-width:820px}
+.hx-limits li{padding:18px 0 18px 30px;border-bottom:1px solid var(--line);position:relative;font-size:16px;color:#bdc3c8}
+.hx-limits li:before{content:'\2014';position:absolute;left:0;color:var(--muted)}.hx-limits strong{color:var(--ink);font-weight:500}
+.household{background:#1a211d}.household .tag{border-color:#66716c}.household .description{color:#bdc3c8}
+.household .project-visual{background:#212b24;flex-direction:column;justify-content:center}
+.household .visual-note{color:var(--home)}
+.hx-mini{list-style:none;margin:0;padding:0;width:min(300px,100%);display:flex;flex-direction:column;gap:8px}
+.hx-mini li{border-radius:14px;padding:11px 14px;font-size:13px;border:1px solid;display:flex;justify-content:space-between;gap:10px}
+.hx-mini li small{font-size:11px;opacity:.8;white-space:nowrap}
+.hx-mini .out{background:var(--out-bg);border-color:var(--out-line);color:var(--out);margin-right:40px}
+.hx-mini .in{background:#1b231d;border-color:var(--home-line);color:var(--home);margin-left:40px}
+.hx-mini .wall{border:0;border-top:2px dashed #5b6168;border-radius:0;padding:4px 0 0;font-size:10px;letter-spacing:1.4px;color:var(--muted);justify-content:center}
+@media(max-width:1050px){.hx-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){
+  .hx-lanes-head,.hx-quiet{display:none}
+  .hx-flow{grid-template-columns:1fr;row-gap:10px}.hx-flow:before{left:22px}
+  .hx-step.out,.hx-step.in{grid-column:1;margin:0 0 0 44px;padding:18px}
+  .hx-step.out:after,.hx-step.in:after{position:absolute;right:16px;font-size:9px;letter-spacing:1.3px;font-weight:600}
+  .hx-step{position:relative}.hx-step.out:after{content:'ONLINE';color:var(--out)}.hx-step.in:after{content:'ON YOUR COMPUTER';color:var(--home)}
+  .hx-step h3{font-size:20px;margin-top:14px}.hx-n{font-size:26px}
+  .hx-side{margin:26px 0 0;padding:18px}.hx-fine{margin-left:0}
+  .hx-stats strong{font-size:32px}
+  .household .project-visual{height:auto;padding:52px 20px 50px}
+  .hx-mini .out{margin-right:24px}.hx-mini .in{margin-left:24px}
+}

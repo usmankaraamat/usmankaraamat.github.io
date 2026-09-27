@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usman Karamat — household AI</title>
+  <meta name="description" content="Meetings turned into to-dos and calendar plans, with personal details kept on my own computer. Built with Fathom, n8n, a local AI model, Notion and Google Calendar.">
+  <meta name="theme-color" content="#111315">
+  <meta property="og:title" content="Usman Karamat — household AI">
+  <meta property="og:description" content="Ever wanted to automate something, privacy first? I did exactly that, for meetings at least.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f49ed'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='40' font-weight='700' fill='white'%3Eu%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="chapter-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap"><a class="wordmark" href="index.html" aria-label="Usman home">usman<span>＊</span></a><nav aria-label="Main navigation"><a href="index.html">home</a><a href="engineering.html">engineering</a><a href="beyond-work.html">beyond work</a><a href="side-quests.html">side quests</a></nav></header>
+  <main id="main">
+
+    <section class="chapter wrap hx-intro" aria-labelledby="hx-title">
+      <div class="section-heading"><span>HOUSEHOLD AI</span><a href="index.html#things">everything i built ↗</a></div>
+      <div class="chapter-heading"><h1 id="hx-title">ever wanted to automate something, <span class="hx-stay">privacy first?</span></h1><p>Well, I did exactly that. For meetings, at least.</p></div>
+      <p class="hx-built">Built with Fathom, n8n, an AI model running on my own computer, Notion and Google Calendar. Never heard of some of these? Each one gets a one-line intro below.</p>
+      <div class="project-links hx-top-links"><a class="button" href="https://github.com/usmankaraamat/household-ai" target="_blank" rel="noopener">source code <span>↗</span></a></div>
+      <!-- A 90-second screen recording goes here once it's made. -->
+    </section>
+
+    <section class="chapter wrap" aria-labelledby="flow-title">
+      <div class="section-heading"><span>HOW IT WORKS</span></div>
+      <div class="hx-lanes-head" aria-hidden="true"><span class="out">ONLINE</span><span class="in">ON YOUR COMPUTER</span></div>
+      <h2 id="flow-title" class="visually-hidden">How it works</h2>
+      <ol class="hx-flow">
+        <li class="hx-step out"><span class="hx-n">1</span><div><h3>Fathom records the meeting</h3><p>You set up Fathom so it joins your meetings and writes down everything said.</p><p class="hx-aside">Fathom is an AI note-taker. It sits in on your calls so you don’t have to scribble.</p></div></li>
+        <li class="hx-quiet" aria-hidden="true">meanwhile, online:<br>nothing. steps 2 to 4<br>never leave your computer.</li>
+        <li class="hx-step in"><span class="hx-n">2</span><div><h3>your computer picks it up</h3><p>n8n, running on your computer, fetches what Fathom wrote down.</p><p class="hx-aside">n8n is a very patient robot that follows a flowchart: when this happens, do that, then that.</p></div></li>
+        <li class="hx-step in"><span class="hx-n">3</span><div><h3>AI turns it into to-dos</h3><p>An AI model on your own computer turns the meeting into points you can act on. Personal details, like a CNIC or a card number, are stripped out.</p><p class="hx-aside">Same idea as ChatGPT, just smaller, and it runs on my graphics card instead of someone else’s servers.</p></div></li>
+        <li class="hx-step in"><span class="hx-n">4</span><div><h3>you say yes or no</h3><p>You review those points, then accept or reject them. Nothing is saved anywhere until you do.</p></div></li>
+        <li class="hx-step out"><span class="hx-n">5</span><div><h3>Notion and your calendar get updated</h3><p>The points go into a Notion page, and any plans you made land on your calendar.</p><p class="hx-aside">Notion is a notebook that lives online and syncs to your phone.</p></div></li>
+      </ol>
+      <div class="hx-side"><span class="hx-n">6</span><div><h3>and for the paperwork</h3><p>Drowning in documents? Put them in a folder, ask a question, and the AI answers from those papers and tells you which one it used. No digging through all of them, and nothing leaves your computer.</p></div></div>
+      <p class="hx-fine">One honest catch: Fathom itself hears the meeting. Everything after that stays on your computer.</p>
+    </section>
+
+    <section class="chapter wrap" aria-labelledby="numbers-title">
+      <div class="section-heading"><span>DOES IT WORK?</span></div>
+      <h2 id="numbers-title" class="visually-hidden">Does it work?</h2>
+      <div class="hx-stats">
+        <div><strong>20 of 21</strong><span>questions about a pile of test documents answered correctly</span></div>
+        <div><strong>under 30 s</strong><span>to turn a meeting into to-dos, on my own graphics card</span></div>
+        <div><strong>0</strong><span>duplicates, even when the same meeting came in twice</span></div>
+        <div><strong>55</strong><span>automatic checks that run every time I change the code</span></div>
+      </div>
+    </section>
+
+    <section class="chapter wrap" aria-labelledby="learned-title">
+      <div class="section-heading"><span>WHAT I LEARNED BUILDING IT</span></div>
+      <h2 id="learned-title" class="visually-hidden">What I learned building it</h2>
+      <ul class="hx-limits">
+        <li><strong>Small AI models are bad at dates.</strong> It kept putting “tomorrow” on the day of the meeting, so now the AI only notes the words and the code works out the date.</li>
+        <li><strong>Computers wake up before the Wi-Fi does.</strong> Right after a restart, saving to Notion failed. Now it waits for the internet first.</li>
+        <li><strong>It lives on my PC.</strong> When my PC is off, so is this. A version that runs online is next.</li>
+      </ul>
+    </section>
+
+    <section class="last-nudge wrap" aria-label="Keep exploring"><span>another rabbit hole?</span><a href="side-quests.html#plates">the number-plate study ↗</a><a href="index.html">back to home ↗</a></section>
+    <footer class="wrap"><div class="footer-top"><h2>say hi, if<br>you’d like.</h2><a class="contact" href="mailto:usmankaramat78@gmail.com">drop me a line ↗</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> Usman Karamat</span><span>made with a little too much attention.</span><a href="https://github.com/usmankaraamat" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
