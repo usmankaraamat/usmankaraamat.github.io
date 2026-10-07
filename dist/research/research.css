@@ -10,3 +10,11 @@
 @media(max-width:370px){.principles{grid-template-columns:1fr}.scene{padding:5px}.person{transform:scale(.8)}.scene-pair{gap:7px}.study-copy,.study-visual{padding:20px}.r-hero h1{font-size:38px}}
 @media(max-width:700px){.scene{padding:8px}.person{width:110px;transform:scale(.85);transform-origin:center center}}
 @media(max-width:370px){.person{width:90px;transform:scale(.75)}}
+
+/* Long-form content uses the deployed page's existing components. */
+.study-copy>p+p{margin-top:16px}.detail-grid.long-detail{grid-template-columns:1fr 1fr}.method-notes{margin-top:32px}.method-notes p+p,.evaluation-copy p+p{margin-top:16px}.evaluation-copy h2{margin-bottom:22px}.ownership p+p{margin-top:14px}.research-page footer .contact-intro{max-width:720px;color:var(--muted);font-size:16px}.contact-intro p+p{margin-top:14px}.programme-copy>p{max-width:none}.next li p+p{margin-top:12px}
+@media(max-width:700px){.detail-grid.long-detail{grid-template-columns:1fr}}
+@media print{.site-header{position:static}.study,.programme{break-inside:avoid}details::details-content{content-visibility:visible}.research-page footer{break-inside:avoid}}
+/* The lead sentence of a block, previously unstyled. */
+.research-page .lead{color:#e2e5e6;font-size:1.07em}
+.method-notes{padding-bottom:40px}.method-notes h3,.evaluation-copy h3{font-family:var(--heading);font-size:20px;font-weight:500;letter-spacing:-.5px;line-height:1.25;margin:0 0 12px}
